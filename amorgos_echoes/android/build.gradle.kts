@@ -16,6 +16,16 @@ allprojects {
     }
 }
 
+extra.apply {
+    set("compileSdk", 35)
+    set("minSdk", 31)
+    set("targetSdk", 35)
+    set("javaVersion", JavaVersion.VERSION_11)
+    set("FlutterFire", mapOf(
+        "FirebaseSDKVersion" to "34.0.0"
+    ))
+}
+
 val newBuildDir: Directory = rootProject.layout.buildDirectory.dir("../../build").get()
 rootProject.layout.buildDirectory.value(newBuildDir)
 

@@ -6,45 +6,41 @@ plugins {
     id("com.google.gms.google-services")
 }
 
-// android/build.gradle.kts
-
-
-
 android {
     namespace = "com.example.amorgos_echoes"
-    compileSdk = flutter.compileSdkVersion
+    compileSdk = rootProject.extra["compileSdk"] as Int
     ndkVersion = "27.0.12077973"
-        // other existing config
-
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
-    }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId = "com.example.amorgos_echoes"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        minSdk = rootProject.extra["minSdk"] as Int
+        targetSdk = rootProject.extra["targetSdk"] as Int
+        versionCode = 1
+        versionName = "1.0"
     }
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
+            // TODO: Add your signing config here for release
             signingConfig = signingConfigs.getByName("debug")
         }
+    }
+
+    compileOptions {
+        sourceCompatibility = rootProject.extra["javaVersion"] as JavaVersion
+        targetCompatibility = rootProject.extra["javaVersion"] as JavaVersion
+    }
+
+    kotlinOptions {
+        jvmTarget = (rootProject.extra["javaVersion"] as JavaVersion).toString()
     }
 }
 
 flutter {
     source = "../.."
+}
+
+dependencies {
+    implementation(platform("com.google.firebase:firebase-bom:34.0.0"))
+    implementation("com.google.firebase:firebase-firestore")
 }
