@@ -1,0 +1,40 @@
+{
+  "errorLoading": "Error loading",
+
+  "discoverAmorgos": "Discover Amorgos",
+"natureOutdoors": "Nature & Outdoors",
+"sightsCulture": "Sights & Culture",
+"foodDrink": "Food & Drink",
+"shopsServices": "Shops & Services",
+"placesToStay": "Places to Stay",
+"exploreMore": "Explore more",
+"tipsOfTheWeek": "Tips of the Week",
+"seeAll": "See All",
+  "discover": "Discover",
+  "mustDo": "Must Do",
+  "favorites": "Favorites",
+  "myProfile": "About us",
+  "showMore": "Show more",
+  "locationNotAvailable": "Location not available",
+  "offers": "Offers",
+  "thankYou": "Thank you for downloading our app!",
+  "businessPrompt": "Own a business in Amorgos?\nIf you'd like to be listed, contact us at:",
+  "touristPrompt": "Are you a visitor and want to help us improve?\nSend us an email or leave a review:",
+  "businessEmail": "amo.discoveryapp@gmail.com",
+  "holidayWish": "Enjoy your holiday in Amorgos!",
+  "rateOnPlayStore": "Rate on Play Store",
+  "rateOnAppStore": "Rate on App Store",
+  "noFavoritesYet": "No Favorites Yet",
+  "visitWebsite": "Visit Website",
+  "showOnMap": "Show on Map",
+  "errorOpeningWebsite": "Could not open the website",
+  "offer": "Offer",
+  "emailSubject": "Contact from the app",
+  "emailBody": "Hello, I would like to get in touch.",
+  "noEmailAppFound": "No email app found on your device.",
+  "emailCopied": "Email copied to clipboard",
+  "internetNotice": "Connect to the internet to load all app data."
+
+
+
+}

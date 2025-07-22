@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "625813455055",
+    "project_id": "amorgosechoes",
+    "storage_bucket": "amorgosechoes.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:625813455055:android:6635d9accaac004a8cf7ba",
+        "android_client_info": {
+          "package_name": "com.example.amorgos_echoes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAU1dcV3PAdm2o2kIjhkZlIjqUC7HRVbO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,40 @@
+{
+  "errorLoading": "Σφάλμα κατά τη φόρτωση",
+  "discoverAmorgos": "Ανακάλυψε την Αμοργό",
+"natureOutdoors": "Φύση & Ύπαιθρος",
+"sightsCulture": "Αξιοθέατα & Κουλτούρα",
+"foodDrink": "Φαγητό & Ποτό",
+"shopsServices": "Μαγαζιά & Υπηρεσίες",
+"placesToStay": "Διαμονή",
+"exploreMore": "Εξερεύνησε περισσότερα",
+"tipsOfTheWeek": "Συμβουλές της Εβδομάδας",
+"seeAll": "Δες τα όλα",
+  "discover": "Ανακάλυψε",
+  "mustDo": "Μην τα χάσεις",
+  "favorites": "Αγαπημένα",
+  "myProfile": "Σχετικά με εμάς",
+  "showMore": "Δες περισσότερα",
+  "locationNotAvailable": "Η τοποθεσία δεν είναι διαθέσιμη",
+  "offers": "Προσφορές",
+  "thankYou": "Ευχαριστούμε που κατεβάσατε την εφαρμογή μας!",
+  "businessPrompt": "Έχετε επιχείρηση στην Αμοργό;\nΑν θέλετε να προστεθεί στην εφαρμογή μας, επικοινωνήστε:",
+  "touristPrompt": "Είστε επισκέπτης και θέλετε να μας βοηθήσετε;\nΣτείλτε email ή αφήστε αξιολόγηση:",
+  "businessEmail": "amo.discoveryapp@gmail.com",
+  "holidayWish": "Καλές διακοπές στην Αμοργό!",
+  "rateOnPlayStore": "Αξιολόγηση στο Play Store",
+  "rateOnAppStore": "Αξιολόγηση στο App Store",
+  "noFavoritesYet": "Δεν έχεις βάλει κάτι ακόμα στα αγαπημένα",
+  "visitWebsite": "Ιστοσελίδα",
+  "showOnMap": "Χάρτης",
+  "errorOpeningWebsite": "Δεν ήταν δυνατή η προβολή της ιστοσελίδας",
+  "offer": "Προσφορά",
+  "emailSubject": "Επικοινωνία από την εφαρμογή",
+  "emailBody": "Γεια σας, θα ήθελα να επικοινωνήσω.",
+  "noEmailAppFound": "Δεν βρέθηκε εφαρμογή email στη συσκευή σας.",
+
+  "emailCopied": "Το email αντιγράφηκε στο πρόχειρο",
+
+  "internetNotice": "Συνδέσου στο διαδίκτυο για να φορτωθούν όλα τα δεδομένα της εφαρμογής."
+
+
+}
