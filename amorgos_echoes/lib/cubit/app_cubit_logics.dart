@@ -3,7 +3,6 @@ import 'package:amorgos_echoes/cubit/app_cubits.dart';
 import 'package:amorgos_echoes/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../pages/navpages/main_page.dart';
 
 class AppCubitLogics extends StatelessWidget {

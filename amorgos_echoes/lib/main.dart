@@ -36,7 +36,6 @@ Future<void> main() async {
   final localeCubit = LocaleCubit();
   await localeCubit.loadSavedLocale();
 
-  // ✅ Καθυστέρηση 5 δευτερόλεπτα για splash screen
   await Future.delayed(const Duration(seconds: 1));
 
   runApp(
@@ -63,7 +62,7 @@ class MyApp extends StatelessWidget {
             Locale('el'),
           ],
           localizationsDelegates: const [
-            AppLocalizations.delegate, // ✅ ΕΔΩ ΕΙΝΑΙ ΤΟ ΚΛΕΙΔΙ
+            AppLocalizations.delegate,
             GlobalMaterialLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
