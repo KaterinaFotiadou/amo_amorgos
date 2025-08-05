@@ -298,6 +298,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Connect to the internet to load all app data.'**
   String get internetNotice;
+
+  /// No description provided for @reloadButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Reload'**
+  String get reloadButton;
+
+  /// No description provided for @offlineTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'No Internet Connection'**
+  String get offlineTitle;
+
+  /// No description provided for @offlineMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Please check your connection and try again.'**
+  String get offlineMessage;
+
+  /// No description provided for @retry.
+  ///
+  /// In en, this message translates to:
+  /// **'Retry'**
+  String get retry;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

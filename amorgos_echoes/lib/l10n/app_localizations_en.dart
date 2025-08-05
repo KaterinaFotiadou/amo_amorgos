@@ -109,4 +109,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get internetNotice => 'Connect to the internet to load all app data.';
+
+  @override
+  String get reloadButton => 'Reload';
+
+  @override
+  String get offlineTitle => 'No Internet Connection';
+
+  @override
+  String get offlineMessage => 'Please check your connection and try again.';
+
+  @override
+  String get retry => 'Retry';
 }

@@ -109,4 +109,16 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get internetNotice => 'Συνδέσου στο διαδίκτυο για να φορτωθούν όλα τα δεδομένα της εφαρμογής.';
+
+  @override
+  String get reloadButton => 'Επαναφόρτωση';
+
+  @override
+  String get offlineTitle => 'Δεν υπάρχει σύνδεση';
+
+  @override
+  String get offlineMessage => 'Παρακαλώ ελέγξτε τη σύνδεσή σας και δοκιμάστε ξανά.';
+
+  @override
+  String get retry => 'Επανάληψη';
 }

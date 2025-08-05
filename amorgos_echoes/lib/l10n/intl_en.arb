@@ -33,7 +33,11 @@
   "emailBody": "Hello, I would like to get in touch.",
   "noEmailAppFound": "No email app found on your device.",
   "emailCopied": "Email copied to clipboard",
-  "internetNotice": "Connect to the internet to load all app data."
+  "internetNotice": "Connect to the internet to load all app data.",
+  "reloadButton": "Reload",
+  "offlineTitle": "No Internet Connection",
+  "offlineMessage": "Please check your connection and try again.",
+  "retry": "Retry"
 
 
 

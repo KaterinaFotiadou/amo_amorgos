@@ -1,32 +1,25 @@
-import 'dart:io';
-import 'package:cloud_firestore/cloud_firestore.dart';
+// File: lib/main.dart
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:amorgos_echoes/l10n/app_localizations.dart';
-import 'cubit/locale_cubit.dart';
 import 'firebase_options.dart';
+
+import 'cubit/connectivity_cubit.dart';
 import 'cubit/app_cubit_logics.dart';
 import 'cubit/app_cubits.dart';
+import 'cubit/welcome_cubit.dart';
+import 'cubit/locale_cubit.dart';
+import 'l10n/app_localizations.dart';
+import 'widgets/offline_overlay.dart';
 import 'services/api_service.dart';
 import 'services/welcome_service.dart';
-import 'cubit/welcome_cubit.dart';
-
-class MyHttpOverrides extends HttpOverrides {
-  @override
-  HttpClient createHttpClient(SecurityContext? ctx) {
-    return super.createHttpClient(ctx);
-  }
-}
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   FirebaseFirestore.instance.settings = const Settings(
     persistenceEnabled: true,
@@ -36,11 +29,14 @@ Future<void> main() async {
   final localeCubit = LocaleCubit();
   await localeCubit.loadSavedLocale();
 
-  await Future.delayed(const Duration(seconds: 1));
-
   runApp(
-    BlocProvider<LocaleCubit>.value(
-      value: localeCubit,
+    MultiBlocProvider(
+      providers: [
+        BlocProvider<ConnectivityCubit>(create: (_) => ConnectivityCubit()),
+        BlocProvider<LocaleCubit>.value(value: localeCubit),
+        BlocProvider<AppCubits>(create: (_) => AppCubits(ApiService())),
+        BlocProvider<WelcomeCubit>(create: (_) => WelcomeCubit(WelcomeService())),
+      ],
       child: const MyApp(),
     ),
   );
@@ -57,10 +53,7 @@ class MyApp extends StatelessWidget {
           title: 'Amorgos Echoes',
           debugShowCheckedModeBanner: false,
           locale: locale,
-          supportedLocales: const [
-            Locale('en'),
-            Locale('el'),
-          ],
+          supportedLocales: const [Locale('en'), Locale('el')],
           localizationsDelegates: const [
             AppLocalizations.delegate,
             GlobalMaterialLocalizations.delegate,
@@ -73,17 +66,19 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
             useMaterial3: true,
           ),
-          home: MultiBlocProvider(
-            providers: [
-              BlocProvider<AppCubits>(
-                create: (_) => AppCubits(ApiService()),
-              ),
-              BlocProvider<WelcomeCubit>(
-                create: (_) => WelcomeCubit(WelcomeService()),
-              ),
-            ],
-            child: AppCubitLogics(),
-          ),
+          builder: (context, child) {
+            final isOnline = context.watch<ConnectivityCubit>().state;
+            return Stack(
+              children: [
+                child!,
+                if (!isOnline)
+                  OfflineOverlay(
+                    onRetry: () => context.read<ConnectivityCubit>().initConnectivity(),
+                  ),
+              ],
+            );
+          },
+          home: const AppCubitLogics(),
         );
       },
     );
