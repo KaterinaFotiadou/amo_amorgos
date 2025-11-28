@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "625813455055",
+    "project_id": "amorgosechoes",
+    "storage_bucket": "amorgosechoes.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:625813455055:android:d5fd12223a76fc728cf7ba",
+        "android_client_info": {
+          "package_name": "com.amorgos.amoamorgos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "625813455055-0fhe3mqp3mq9ts1t76n2slhcqlm7ntip.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAU1dcV3PAdm2o2kIjhkZlIjqUC7HRVbO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "625813455055-0fhe3mqp3mq9ts1t76n2slhcqlm7ntip.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "625813455055-g76rm2d1gdukkc2jvuopn89e9m5l8ple.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.amorgosEchoes"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:625813455055:android:6635d9accaac004a8cf7ba",
+        "android_client_info": {
+          "package_name": "com.example.amorgos_echoes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "625813455055-0fhe3mqp3mq9ts1t76n2slhcqlm7ntip.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAU1dcV3PAdm2o2kIjhkZlIjqUC7HRVbO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "625813455055-0fhe3mqp3mq9ts1t76n2slhcqlm7ntip.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "625813455055-g76rm2d1gdukkc2jvuopn89e9m5l8ple.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.amorgosEchoes"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
