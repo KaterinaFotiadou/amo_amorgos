@@ -6,7 +6,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'firebase_options.dart';
-
 import 'cubit/connectivity_cubit.dart';
 import 'cubit/app_cubit_logics.dart';
 import 'cubit/app_cubits.dart';
